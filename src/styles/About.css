@@ -1,0 +1,122 @@
+.about {
+  padding: 150px;
+  background-color: #2b7a7b;
+}
+
+@media (max-width: 940px) {
+  .about {
+    padding: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 50px;
+  }
+}
+
+.about div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.about div strong {
+  font-size: 40px;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  color: #17252a;
+  font-weight: 500;
+}
+
+@media (max-width: 489px) {
+  .about div strong {
+    font-size: 20px;
+    letter-spacing: .5px;
+  }
+}
+
+.about div strong span {
+  color: #fff;
+  font-size: 50px;
+}
+
+@media (max-width: 489px) {
+  .about div strong span {
+    font-size: 30px;
+  }
+}
+
+.about div p {
+  width: 40%;
+  color: #fff;
+}
+
+@media (max-width: 940px) {
+  .about div p {
+    width: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about div p {
+    width: 100%;
+  }
+}
+
+.about section {
+  padding-top: 150px;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .about section {
+    padding-top: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.about section div {
+  padding: 15px;
+  display: inline-block;
+  background-color: #fff;
+  margin: 10px;
+  width: 250px;
+  border-radius: 5px;
+}
+
+.about section div img {
+  width: 30%;
+}
+
+.about section div p {
+  color: #666666;
+  text-align: center;
+  width: 100%;
+}
+/*# sourceMappingURL=About.css.map */

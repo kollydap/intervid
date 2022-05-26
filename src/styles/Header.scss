@@ -1,0 +1,124 @@
+
+$colors: (
+    primary: #def2f1,
+    primary-light:lighten(#3b8beb, 40%),
+    subcolor:#2b7a7b,
+    mainFontColor:#fff,
+    mainColor:#3aafa9,
+);
+
+$padding:50px 150px;
+$borders:50px;
+$tablet:940px;
+$mobpad:50px;
+$subpadding:100px;
+@mixin tablet {
+    @media (max-width:$tablet) {
+        @content;
+    }    
+}
+
+@function color($color-name){
+    @return map-get($colors,$color-name)
+}
+.header{
+    height: 100vh;
+    padding:$padding;
+    @include tablet{
+        padding: $subpadding;
+    }
+    @media (max-width:600px) {
+        height: 85vh;
+        
+    }
+    @media (max-width: 480px) {
+        padding: $mobpad;
+        
+    }
+
+    img{
+        position: relative;
+        top: 140px;
+        left: -70px;
+        float: right;
+        width: 400px;
+
+        @media (max-width: 1202px) {
+            display: none;
+        }
+    }
+
+    .nav{
+        display: flex;
+
+        strong{
+            font-size: 24px;
+            letter-spacing: 3px;
+        }
+    }
+    
+    main{
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        section{
+            h1{
+                color:color(subcolor);
+                font-size: 100px;
+                @media (max-width:600px) {
+                    font-size: 70px;
+                    
+                }
+                @media (max-width:400px) {
+                    font-size: 50px;
+                    margin-bottom: 10px;
+                    
+                }
+
+                
+                
+            }
+            h3{
+                margin-top: -70px;
+                font-size: 26px;
+                margin-bottom: 40px;
+                letter-spacing: 2px;
+                color: #17252a;
+                font-weight: 500;
+                text-transform: uppercase;
+                
+                @media (max-width:600px) {
+                    font-size: 18px;
+                }
+                @media (max-width:400px) {
+                    margin-top: 20px;
+                    
+                    
+                }
+            }
+
+            p{
+                width: 40%;
+                color: lighten(#000, 40%);
+                @media (max-width:1200px) {
+                    width: 100%;
+                    
+                }
+                
+            }
+
+            button{
+                padding: 20px;
+                border-radius: $borders;
+                width:200px;
+                background-color: #17252a;
+                color:#fff;
+                border: 2px solid color(primary);
+                font-weight: 500;
+                margin-top: 20px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

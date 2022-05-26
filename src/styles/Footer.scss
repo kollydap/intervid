@@ -1,0 +1,61 @@
+$colors: (
+    primary: #def2f1,
+    primary-light:lighten(#3b8beb, 40%),
+    subcolor:#2b7a7b,
+    // #27363b
+    mainFontColor:#fff,
+    mainColor:#3aafa9,
+);
+
+$padding:50px 150px;
+$borders:50px;
+$tablet:940px;
+$mobpad:50px;
+$subpadding:100px;
+@mixin tablet {
+    @media (max-width:$tablet) {
+        @content;
+    }    
+}
+
+@function color($color-name){
+    @return map-get($colors,$color-name)
+}
+
+.footer{
+    padding: $padding;
+    text-align: center;
+    background-color: color(subcolor);
+
+    @include tablet{
+        padding: $subpadding;
+    }
+
+    @media (max-width: 480px) {
+        padding: $mobpad;
+        
+    }
+
+    strong{
+        color:#fff;
+        letter-spacing: 1px;
+    }
+
+    div{
+        padding: 50px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+            @media (max-width: 489px) {
+                padding: 20px;
+                justify-content: center;
+                align-items: center;
+                
+            }
+
+        p{
+            color: #fff;
+        }
+    }
+}

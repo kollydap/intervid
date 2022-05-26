@@ -1,0 +1,125 @@
+
+$colors: (
+    primary: #def2f1,
+    primary-light:lighten(#3b8beb, 40%),
+    subcolor:#2b7a7b,
+    mainFontColor:#fff,
+    mainColor:#3aafa9,
+);
+
+$padding:150px;
+$subpadding:100px;
+$borders:50px;
+$tablet:940px;
+$mobpad:50px;
+@mixin tablet {
+    @media (max-width:$tablet) {
+        @content;
+    }    
+}
+@function color($color-name){
+    @return map-get($colors,$color-name)
+}
+
+.about{
+    padding:$padding;
+    background-color: color(subcolor);
+    @include tablet{
+        padding: $subpadding;
+    }
+    @media (max-width: 480px) {
+        padding: $mobpad;
+        
+    }
+
+    div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;    
+
+        strong{
+            font-size: 40px;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+            color: #17252a;
+            font-weight: 500;
+
+            @media (max-width: 489px) {
+                font-size: 20px;
+                letter-spacing: .5px;
+                
+            }
+
+            span{
+                color:#fff;
+                font-size: 50px;
+
+                @media (max-width: 489px) {
+                    font-size: 30px;
+                    
+                }
+            }
+        }
+        
+        p{
+            width: 40%;
+            color: #fff;
+            @include tablet{
+                width: 60%
+            }
+            @media (max-width: 480px) {
+                width:100%
+                
+            }
+            
+        }
+    }
+
+    section{
+        padding-top: 150px;
+        text-align: center;
+        @media (max-width: 480px) {
+            padding-top: 50px;
+            
+        }
+
+        @media (max-width: 480px) {
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items:center;
+           
+            
+        }
+
+
+        div{
+
+            padding: 15px;
+            display: inline-block;
+            background-color: #fff;
+            margin: 10px;
+            width: 250px;
+            border-radius: 5px;
+        
+            
+            // @media (max-width: 480px) {
+            //     justify-content:center;
+            //     align-items:center;
+            //     margin: 10px 0;
+                
+            // }
+
+            img{
+                width: 30%;
+            }
+            
+            p{
+                color: lighten(#000, 40%);
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
+}

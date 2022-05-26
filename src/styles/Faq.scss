@@ -1,0 +1,77 @@
+
+$colors: (
+    primary: #def2f1,
+    primary-light:lighten(#3b8beb, 40%),
+    subcolor:#3ae7ca,
+    mainFontColor:#75b2ad,
+    mainColor:#3aafa9,
+);
+
+$padding:150px;
+$borders:50px;
+$tablet:940px;
+$mobpad:50px;
+$subpadding:100px;
+@mixin tablet {
+    @media (max-width:$tablet) {
+        @content;
+    }    
+}
+
+
+@function color($color-name){
+    @return map-get($colors,$color-name)
+}
+
+.faq{
+    padding: $padding;
+    @include tablet{
+        padding: $subpadding;
+    }
+    background-color: color(mainFontColor);
+    @media (max-width: 480px) {
+        padding: $mobpad;
+        
+    }
+
+    div{
+
+        strong{
+            font-size: 40px;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+            color: #17252a;
+            font-weight: 500;
+
+            @media (max-width: 489px) {
+                font-size: 20px;
+                letter-spacing: .5px;
+                
+            }
+
+            span{
+                color:#fff;
+                font-size: 50px;
+
+                @media (max-width: 489px) {
+                    font-size: 30px;
+                    
+                }
+            }
+        }       
+    }
+
+    ul{
+        margin-top: 100px;
+        @media (max-width: 480px) {
+            margin-top: $mobpad;
+            
+        }
+
+        li{
+            padding: 15px 0;
+            font-weight: 450;
+        }
+
+    }
+}

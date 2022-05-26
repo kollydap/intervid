@@ -1,0 +1,94 @@
+.createacc {
+  padding: 150px;
+}
+
+@media (max-width: 940px) {
+  .createacc {
+    padding: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .createacc {
+    padding: 50px;
+  }
+}
+
+.createacc div {
+  padding-bottom: 150px;
+}
+
+@media (max-width: 480px) {
+  .createacc div {
+    padding-bottom: 50px;
+  }
+}
+
+.createacc div strong {
+  font-size: 40px;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  color: #17252a;
+  font-weight: 500;
+}
+
+@media (max-width: 489px) {
+  .createacc div strong {
+    font-size: 20px;
+    letter-spacing: .5px;
+  }
+}
+
+.createacc div strong span {
+  color: #75b2ad;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 50px;
+}
+
+@media (max-width: 489px) {
+  .createacc div strong span {
+    font-size: 30px;
+  }
+}
+
+.createacc form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.createacc form input {
+  padding: 12px;
+  outline: none;
+  background-color: #def2f1;
+  border: none;
+  border-radius: 2px;
+  margin: 10px;
+  width: 45%;
+}
+
+@media (max-width: 599px) {
+  .createacc form input {
+    width: 100%;
+  }
+}
+
+.createacc form button {
+  padding: 10px;
+  border-radius: 50px;
+  width: 350px;
+  background-color: #75b2ad;
+  color: #fff;
+  border: 2px solid #def2f1;
+  font-weight: 800;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=CreateAccount.css.map */

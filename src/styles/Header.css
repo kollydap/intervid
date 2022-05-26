@@ -1,0 +1,121 @@
+.header {
+  height: 100vh;
+  padding: 50px 150px;
+}
+
+@media (max-width: 940px) {
+  .header {
+    padding: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    height: 85vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 50px;
+  }
+}
+
+.header img {
+  position: relative;
+  top: 140px;
+  left: -70px;
+  float: right;
+  width: 400px;
+}
+
+@media (max-width: 1202px) {
+  .header img {
+    display: none;
+  }
+}
+
+.header .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .nav strong {
+  font-size: 24px;
+  letter-spacing: 3px;
+}
+
+.header main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.header main section h1 {
+  color: #2b7a7b;
+  font-size: 100px;
+}
+
+@media (max-width: 600px) {
+  .header main section h1 {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header main section h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+}
+
+.header main section h3 {
+  margin-top: -70px;
+  font-size: 26px;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  color: #17252a;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .header main section h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header main section h3 {
+    margin-top: 20px;
+  }
+}
+
+.header main section p {
+  width: 40%;
+  color: #666666;
+}
+
+@media (max-width: 1200px) {
+  .header main section p {
+    width: 100%;
+  }
+}
+
+.header main section button {
+  padding: 20px;
+  border-radius: 50px;
+  width: 200px;
+  background-color: #17252a;
+  color: #fff;
+  border: 2px solid #def2f1;
+  font-weight: 500;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=Header.css.map */

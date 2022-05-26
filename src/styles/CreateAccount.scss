@@ -1,0 +1,104 @@
+
+$colors: (
+    primary: #def2f1,
+    primary-light:lighten(#3b8beb, 40%),
+    subcolor:#3ae7ca,
+    mainFontColor:#75b2ad,
+    mainColor:#3aafa9,
+);
+
+$padding:150px;
+$borders:50px;
+$tablet:940px;
+$subpadding:100px;
+$mobpad:50px;
+@mixin tablet {
+    @media (max-width:$tablet) {
+        @content;
+    }    
+   
+}
+
+@function color($color-name){
+    @return map-get($colors,$color-name)
+}
+
+.createacc{
+    padding: $padding;
+    @include tablet{
+        padding: $subpadding;
+    }
+    @media (max-width: 480px) {
+        padding: $mobpad;
+        
+    }
+    
+    div{
+        padding-bottom:150px ;
+
+        @media (max-width: 480px) {
+            padding-bottom: $mobpad;
+            
+        }
+
+        strong{
+            font-size: 40px;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+            color: #17252a;
+            font-weight: 500;
+            
+
+            @media (max-width: 489px) {
+                font-size: 20px;
+                letter-spacing: .5px;
+                
+            }
+
+            span{
+                color: color(mainFontColor);
+                align-self: center;
+                font-size: 50px;
+
+                @media (max-width: 489px) {
+                    font-size: 30px;
+                    
+                }
+            }
+        }       
+
+    }
+
+    form{
+         display: flex;
+         justify-content: space-between;
+         flex-wrap: wrap;
+        input{
+            // display: block;
+            padding: 12px;
+            outline: none;
+            background-color: color(primary);
+            border: none;
+            border-radius: 2px;
+            margin:10px;
+            width: 45%;
+            @media (max-width: 599px) {
+                width: 100%;
+                
+            }
+            
+        }
+
+        button{
+            padding: 10px;
+            border-radius: $borders;
+            width:350px;
+            background-color: color(mainFontColor);
+            color:#fff;
+            border: 2px solid color(primary);
+            font-weight: 800;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+    }
+}

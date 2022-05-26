@@ -1,0 +1,58 @@
+.faq {
+  padding: 150px;
+  background-color: #75b2ad;
+}
+
+@media (max-width: 940px) {
+  .faq {
+    padding: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq {
+    padding: 50px;
+  }
+}
+
+.faq div strong {
+  font-size: 40px;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  color: #17252a;
+  font-weight: 500;
+}
+
+@media (max-width: 489px) {
+  .faq div strong {
+    font-size: 20px;
+    letter-spacing: .5px;
+  }
+}
+
+.faq div strong span {
+  color: #fff;
+  font-size: 50px;
+}
+
+@media (max-width: 489px) {
+  .faq div strong span {
+    font-size: 30px;
+  }
+}
+
+.faq ul {
+  margin-top: 100px;
+}
+
+@media (max-width: 480px) {
+  .faq ul {
+    margin-top: 50px;
+  }
+}
+
+.faq ul li {
+  padding: 15px 0;
+  font-weight: 450;
+}
+/*# sourceMappingURL=Faq.css.map */
