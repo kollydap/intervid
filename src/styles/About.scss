@@ -22,6 +22,9 @@ $mobpad:50px;
 }
 
 .about{
+
+
+
     padding:$padding;
     background-color: color(subcolor);
     @include tablet{
@@ -30,6 +33,7 @@ $mobpad:50px;
     @media (max-width: 480px) {
         padding: $mobpad;
         
+
     }
 
     div{
@@ -93,9 +97,7 @@ $mobpad:50px;
             
         }
 
-
         div{
-
             padding: 15px;
             display: inline-block;
             background-color: #fff;
@@ -122,4 +124,5 @@ $mobpad:50px;
             }
         }
     }
+    
 }

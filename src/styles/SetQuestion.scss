@@ -1,0 +1,27 @@
+$colors: (
+    primary: #def2f1,
+    primary-light:lighten(#3b8beb, 40%),
+    subcolor:#2b7a7b,
+    mainFontColor:#fff,
+    mainColor:#3aafa9,
+);
+
+$padding:50px 150px;
+$borders:50px;
+$tablet:940px;
+$mobpad:50px;
+$subpadding:100px;
+@mixin tablet {
+    @media (max-width:$tablet) {
+        @content;
+    }    
+}
+
+@function color($color-name){
+    @return map-get($colors,$color-name)
+}
+
+.setQuestion{
+    padding: $padding;
+    background-color: color(primary);
+}

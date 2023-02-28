@@ -63,15 +63,29 @@ $subpadding:100px;
 
     ul{
         margin-top: 100px;
-        @media (max-width: 480px) {
-            margin-top: $mobpad;
-            
+
+        @media (max-width: 600px) {
+            list-style-type: none;
+            list-style: none;   
+            padding-left: 0px;   
         }
+        
+        @media (max-width: 480px) {
+            margin-top: $mobpad;   
+        }
+        
+        
 
         li{
             padding: 15px 0;
             font-weight: 450;
+
+            @media (max-width: 600px) {
+                font-weight: 350;
+                
+            }
         }
 
     }
+ 
 }

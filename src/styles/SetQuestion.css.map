@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAuBA,AAAA,YAAY,CAAA;EACR,OAAO,EAhBF,IAAI,CAAC,KAAK;EAiBf,gBAAgB,EAxBP,OAAO;CAyBnB",
+    "sources": [
+        "SetQuestion.scss"
+    ],
+    "names": [],
+    "file": "SetQuestion.css"
+}

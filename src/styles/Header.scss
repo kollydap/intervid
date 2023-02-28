@@ -27,8 +27,8 @@ $subpadding:100px;
     @include tablet{
         padding: $subpadding;
     }
-    @media (max-width:600px) {
-        height: 85vh;
+    @media (max-width:1400px) {
+        height: auto;
         
     }
     @media (max-width: 480px) {
@@ -36,11 +36,19 @@ $subpadding:100px;
         
     }
 
+    .flex-head{
+        display: flex;
+        flex-direction:row-reverse ;
+        justify-content: center;
+        align-items: center;
+    }
+
     img{
-        position: relative;
-        top: 140px;
-        left: -70px;
-        float: right;
+        // position: relative;
+        // top: 140px;
+        // left: -70px;
+        // float: right;
+        padding-top:120px;
         width: 400px;
 
         @media (max-width: 1202px) {
@@ -51,9 +59,12 @@ $subpadding:100px;
     .nav{
         display: flex;
 
-        strong{
-            font-size: 24px;
-            letter-spacing: 3px;
+        div{
+            height:50px;
+            width:50px;
+            border-radius: 50%;
+            background-color:#3aafa9;
+
         }
     }
     
@@ -63,9 +74,12 @@ $subpadding:100px;
         height: 100%;
 
         section{
+
+            
             h1{
                 color:color(subcolor);
                 font-size: 100px;
+                animation: moveInLeft 2s ease-in-out;
                 @media (max-width:600px) {
                     font-size: 70px;
                     
@@ -87,6 +101,7 @@ $subpadding:100px;
                 color: #17252a;
                 font-weight: 500;
                 text-transform: uppercase;
+                animation: moveInRight 2s ease-in-out;
                 
                 @media (max-width:600px) {
                     font-size: 18px;
@@ -118,7 +133,41 @@ $subpadding:100px;
                 font-weight: 500;
                 margin-top: 20px;
                 text-transform: uppercase;
+
+                @media (max-width: 480px) {
+                    padding: 15px;
+                    
+                }
             }
+
         }
     }
+    @keyframes moveInLeft{
+        0% {
+          opacity: 0;
+          transform: translateX(-100px);
+        }
+        80% {
+          transform: translateX(10px);
+      
+        }
+        100%{
+          opacity:1;
+          transform: translate(0);
+        }
+      }
+      @keyframes moveInRight{
+        0% {
+          opacity: 0;
+          transform: translateX(100px);
+        }
+       
+        
+        100%{
+          opacity:1;
+          transform: translate(0);
+        }
+      }
 }
+
+// Live Sass: Watch Sass

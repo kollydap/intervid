@@ -45,6 +45,14 @@
   margin-top: 100px;
 }
 
+@media (max-width: 600px) {
+  .faq ul {
+    list-style-type: none;
+    list-style: none;
+    padding-left: 0px;
+  }
+}
+
 @media (max-width: 480px) {
   .faq ul {
     margin-top: 50px;
@@ -54,5 +62,11 @@
 .faq ul li {
   padding: 15px 0;
   font-weight: 450;
+}
+
+@media (max-width: 600px) {
+  .faq ul li {
+    font-weight: 350;
+  }
 }
 /*# sourceMappingURL=Faq.css.map */
